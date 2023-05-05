@@ -59,12 +59,14 @@ export function renderPostsPageComponent({ appEl, page }) {
   }
 
   function likeText(key){
+    let lastWord ='пользователям';
+    //if((key.likes.length + 9)%10==1) lastWord = 'пользователю';
     if(key.likes.length==0) {
       return '0';
     } else if(key.likes.length==1) {
       return key.likes[0].name;
     } else {
-      return key.likes[randomNumber(key.likes.length-1)].name + ' и еще '+ (key.likes.length-1)
+      return key.likes[randomNumber(key.likes.length-1)].name + ' и еще '+ (key.likes.length-1) + ' '+ lastWord;
     }   ;
   }
 

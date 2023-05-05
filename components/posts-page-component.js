@@ -2,6 +2,9 @@ import { USER_POSTS_PAGE, POSTS_PAGE } from "../routes.js";
 import { renderHeaderComponent } from "./header-component.js";
 import { posts, goToPage, getToken } from "../index.js";
 import { likePost } from "../api.js";
+import { formatDistanceToNow } from 'date-fns';
+import { enGB, eo, ru } from 'date-fns/locale';
+
 
 
 
@@ -13,6 +16,7 @@ export function renderPostsPageComponent({ appEl, page }) {
   
   
   //console.log("Актуальный список постов:", posts[6].likes.length-1);
+ // console.log(eoLocale);
   let str ='';
   for(let key of posts){
     //if( page == "user-posts") continue;
@@ -47,7 +51,7 @@ export function renderPostsPageComponent({ appEl, page }) {
                     ${key.description}
                   </p>
                   <p class="post-date">
-                  ${key.createdAt}
+                  ${formatDistanceToNow(new Date(key.createdAt), {locale: ru},)} назад
                   </p>
                 </li>`;
 

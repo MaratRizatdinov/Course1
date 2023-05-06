@@ -66,7 +66,7 @@ export function renderPostsPageComponent({ appEl, page }) {
     } else if(key.likes.length==1) {
       return key.likes[0].name;
     } else {
-      return key.likes[randomNumber(key.likes.length-1)].name + ' и еще '+ (key.likes.length-1) + ' '+ lastWord;
+      return key.likes[randomNumber(key.likes.length-1)].name + ' и ещ '+ (key.likes.length-1) + ' '+ lastWord;
     }   ;
   }
 

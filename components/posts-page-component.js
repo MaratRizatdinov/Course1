@@ -15,7 +15,7 @@ export function renderPostsPageComponent({ appEl, page }) {
   
   
   
-  //console.log("Актуальный список постов:", posts[6].likes.length-1);
+  console.log("Актуальный список постов:", posts[6].likes.length-1);
  // console.log(eoLocale);
   let str ='';
   for(let key of posts){

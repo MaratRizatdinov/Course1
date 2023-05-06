@@ -108,6 +108,7 @@ export function getUserPosts({ token, id }) {
     });
 }
 
+// Лайки и дизлайки
 export function likePost( postToLiked, token , likeStatus) {
   let lastWord = (likeStatus == 'true') ? '/dislike' : '/like';
   return fetch(postsHost+ '/' + postToLiked + lastWord , {

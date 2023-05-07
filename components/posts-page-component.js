@@ -59,8 +59,9 @@ export function renderPostsPageComponent({ appEl, page }) {
   }
 
   function likeText(key){
+    
     let lastWord ='пользователям ';
-    //if((key.likes.length + 9)%10==1) lastWord = 'пользователю';
+    if(key.likes.length==2||(key.likes.length!=12 && (key.likes.length)%10==2)) lastWord = 'пользователю';
     if(key.likes.length==0) {
       return '0';
     } else if(key.likes.length==1) {
